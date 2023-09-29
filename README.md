@@ -1,8 +1,27 @@
-# React + Vite
+# MovieList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
 
-Currently, two official plugins are available:
+1. Clone this repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+  git clone https://github.com/reynaldomarchell/movie-list.git
+```
+
+2.  Go to the project directory
+
+```bash
+  cd movie-list
+```
+
+3. Install the dependencies
+
+```bash
+  npm install
+```
+
+4. Start the app
+
+```bash
+  npm run dev
+```
