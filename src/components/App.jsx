@@ -96,7 +96,7 @@ function App() {
 
       <Main>
         <Box>
-          {query === "" && (
+          {query.length < 3 && (
             <div className="searching-logo">
               <img
                 src="https://media.tenor.com/PbPr6Bpj-6kAAAAd/bocchi-the-rock-anime.gif"
