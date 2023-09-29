@@ -71,7 +71,9 @@ export default function MovieDetails({
           `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}&plot=full`
         );
         const data = await res.json();
+
         console.log(data);
+
         setMovie(data);
         setIsLoading(false);
       }
