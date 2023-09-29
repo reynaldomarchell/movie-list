@@ -102,7 +102,14 @@ export default function MovieDetails({
             <button className="btn-back" onClick={onCloseMovie}>
               &larr;
             </button>
-            <img src={poster} alt={`Poster of ${movie} movie`} />
+            {movie.Poster !== "N/A" ? (
+              <img src={poster} alt={`Poster of ${movie} movie`} />
+            ) : (
+              <img
+                src="https://via.placeholder.com/300x444?text=No+poster"
+                alt="No poster"
+              />
+            )}
             <div className="details-overview">
               <h2>{title}</h2>
               <p>

@@ -103,7 +103,7 @@ function App() {
                 height={`${150} px`}
               />
 
-              <h1>Search for a movie!</h1>
+              <h1>It&apos;s currently empty...</h1>
             </div>
           )}
           {isLoading && <Loader />}
