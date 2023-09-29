@@ -132,7 +132,8 @@ export default function MovieDetails({
                 </>
               ) : (
                 <p>
-                  You rated with movie {watchedUserRating} <span>⭐️</span>
+                  {`You've rated this movie ${watchedUserRating}`}
+                  <span>⭐️</span>
                 </p>
               )}
             </div>
