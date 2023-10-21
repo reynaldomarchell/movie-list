@@ -1,7 +1,14 @@
 export default function WatchedMovie({ movie, onDeleteWatched }) {
   return (
     <li>
-      <img src={movie.poster} alt={`${movie.title} poster`} />
+      {movie.poster !== "N/A" ? (
+        <img src={movie.poster} alt={`${movie.Title} poster`} />
+      ) : (
+        <img
+          src="https://via.placeholder.com/300x444?text=No+poster"
+          alt="No poster"
+        />
+      )}
       <h3>{movie.title}</h3>
       <div>
         <p>
