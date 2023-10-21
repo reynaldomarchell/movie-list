@@ -46,53 +46,44 @@ export default function MovieDetails({
     onCloseMovie();
   }
 
-  useEffect(
-    function () {
-      function callback(e) {
-        if (e.code === "Escape") {
-          onCloseMovie();
-        }
+  useEffect(() => {
+    const callback = (e) => {
+      if (e.code === "Escape") {
+        onCloseMovie();
       }
+    };
 
-      document.addEventListener("keydown", callback);
+    document.addEventListener("keydown", callback);
 
-      return function () {
-        document.removeEventListener("keydown", callback);
-      };
-    },
-    [onCloseMovie]
-  );
+    return function () {
+      document.removeEventListener("keydown", callback);
+    };
+  }, [onCloseMovie]);
 
-  useEffect(
-    function () {
-      async function getMovieDetails() {
-        setIsLoading(true);
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}&plot=full`
-        );
-        const data = await res.json();
+  useEffect(() => {
+    const getMovieDetails = async () => {
+      setIsLoading(true);
+      const res = await fetch(
+        `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}&plot=full`
+      );
+      const data = await res.json();
 
-        console.log(data);
+      console.log(data);
 
-        setMovie(data);
-        setIsLoading(false);
-      }
-      getMovieDetails();
-    },
-    [selectedId]
-  );
+      setMovie(data);
+      setIsLoading(false);
+    };
+    getMovieDetails();
+  }, [selectedId]);
 
-  useEffect(
-    function () {
-      if (!title) return;
-      document.title = `Movie | ${title}`;
+  useEffect(() => {
+    if (!title) return;
+    document.title = `Movie | ${title}`;
 
-      return function () {
-        document.title = "MovieList";
-      };
-    },
-    [title]
-  );
+    return function () {
+      document.title = "MovieList";
+    };
+  }, [title]);
 
   return (
     <div className="details">
