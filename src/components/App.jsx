@@ -133,6 +133,7 @@ function App() {
               <WatchedMoviesList
                 watched={watched}
                 onDeleteWatched={handleDeleteWatched}
+                onSelectMovie={handleSelectMovie}
               />
             </>
           )}
