@@ -10,8 +10,8 @@ import MovieList from "./MovieList";
 import MovieDetails from "./MovieDetails";
 import WatchedSummary from "./WatchedSummary";
 import WatchedMoviesList from "./WatchedMoviesList";
-import { useMovies } from "../useMovies";
-import { useLocalStorageState } from "../useLocalStorageState";
+import { useMovies } from "../hooks/useMovies";
+import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 const KEY = "28492dc1";
 
