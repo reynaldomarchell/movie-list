@@ -1,5 +1,14 @@
 # MovieList
 
+## Information
+
+Movie library app for store and rate your favorite movie. This app fetch API from https://www.omdbapi.com/.
+
+Stack used in this app
+
+- React
+- Vite
+
 ## Installation
 
 1. Clone this repository
